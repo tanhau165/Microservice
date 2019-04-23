@@ -1,4 +1,3 @@
 FROM openjdk:8
-ADD target/springbootjpa-1.0-SNAPSHOT.jar app.jar
 EXPOSE 9000
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","target/springbootjpa-1.0-SNAPSHOT.jar"]

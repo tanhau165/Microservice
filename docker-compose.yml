@@ -14,7 +14,7 @@ services:
     expose:
       - '3306'
 
-  springboot-docker-compose-app-container:
+  s3_apisjava:
     image: s3_apijava
     build:
       context: ./
