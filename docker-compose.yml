@@ -5,11 +5,23 @@ services:
     restart: always
     container_name: 'S1_MySQL'
     environment:
-      MYSQL_DATABASE: 'S1_MySQL'
+      MYSQL_DATABASE: 's1_mysql'
       MYSQL_USER: 'tanhau165'
       MYSQL_PASSWORD: 'Abcdabcd1'
       MYSQL_ROOT_PASSWORD: 'Abcdabcd1'
     ports:
-      - '3308:3308'
+      - '3306:3306'
     expose:
-      - '3308'
+      - '3306'
+
+  springboot-docker-compose-app-container:
+    image: S3_APIsJava
+    build:
+      context: ./
+      dockerfile: S3_APIsJava/Dockerfile
+    ports:
+      - "9000:9000"
+    depends_on:
+      - S1_MySQL
+
+
