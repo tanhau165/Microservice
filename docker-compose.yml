@@ -6,7 +6,7 @@ services:
     container_name: 'S1_MySQL'
     environment:
       MYSQL_DATABASE: 'S1_MySQL'
-      MYSQL_USER: 'root'
+      MYSQL_USER: 'tanhau165'
       MYSQL_PASSWORD: 'Abcdabcd1'
       MYSQL_ROOT_PASSWORD: 'Abcdabcd1'
     ports:
