@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: 'S1_MySQL'
+    environment:
+      MYSQL_DATABASE: 'S1_MySQL'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'Abcdabcd1'
+      MYSQL_ROOT_PASSWORD: 'Abcdabcd1'
+    ports:
+      - '3308:3308'
+    expose:
+      - '3308'
